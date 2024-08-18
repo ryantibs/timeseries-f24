@@ -1,0 +1,43 @@
+---
+title: "Statistics 153: Introduction to Time Series"
+subtitle: "UC Berkeley, Fall 2024"
+listing:
+  - id: buttons
+    template: assets/buttons.ejs
+    contents: buttons.yml
+format:
+  html:
+    page-layout: full
+---
+
+::: {#buttons}
+:::
+
+- **Instructor**: [Ryan Tibshirani](https://www.stat.berkeley.edu/~ryantibs/) (ryantibs at berkeley dot edu)
+- **GSI**: [Tiffany Ding](https://tiffanyding.github.io/) (tiffany_ding at berkeley dot edu)
+- **Reader**: Theo Pan (theopan at berkeley dot edu)
+
+*Please email the GSI with any issues; the Instructor will be looped in only as-needed.*
+
+- **Class times**: Tues and Thurs, 2-3:30pm, VLSB 2040
+- **Lab times**: Fri, 9-11am, Evans 344 and 1-3pm, Evans 332
+- **Office hours**: RT: Thurs, 1-2pm, Evans 417
+
+Handy links:
+
+- [Syllabus](syllabus)
+- [GitHub repo](https://github.com/berkeley-stat153/fall-2024) (source files for lectures and homeworks)
+- [Ed Discussion]() (for class discussions and announcements)
+- [bCourses]() (for grade-keeping and homework solutions)
+
+### Schedule
+
+{{< include schedule.qmd >}}
+
+### Homework
+
+{{< include homework.qmd >}}
+
+### Supplementary resources
+
+{{< include supplementary.qmd >}}

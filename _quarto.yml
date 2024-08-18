@@ -1,0 +1,20 @@
+project:
+  type: website
+
+render:
+  - "*.qmd"
+  - "!*.qmd"
+
+website:
+  site-url: https://stat153.berkeley.edu/fall-2024/
+  google-analytics: G-ZLC7WVGHGY
+          
+
+format:
+  html:
+    theme: cosmo
+    css: assets/styles.css
+    toc: true
+
+
+
