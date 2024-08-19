@@ -19,9 +19,9 @@ format:
 
 *Please email the GSI with any issues; the Instructor will be looped in only as-needed.*
 
-- **Class times**: Tues and Thurs, 2-3:30pm, VLSB 2040
-- **Lab times**: Fri, 9-11am, Evans 344 and 1-3pm, Evans 332
-- **Office hours**: RT: Thurs, 1-2pm, Evans 417
+- **Class times**: Tuesdays and Thursdays, 2-3:30pm, VLSB 2040
+- **Lab times**: Fridays, 9-11am, Evans 344 and 1-3pm, Evans 332
+- **Office hours**: RT: Thursdays, 1-2pm, Evans 417
 
 Handy links:
 
