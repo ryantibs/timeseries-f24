@@ -27,8 +27,8 @@ Handy links:
 
 - [Syllabus](syllabus)
 - [GitHub repo](https://github.com/berkeley-stat153/fall-2024) (source files for lectures and homeworks)
-- [Ed Discussion]() (for class discussions and announcements)
-- [bCourses]() (for grade-keeping and homework solutions)
+- [Ed Discussion](https://edstem.org/us/courses/62773/) (for class discussions and announcements)
+- [bCourses](https://bcourses.berkeley.edu/courses/1537658/) (for grade-keeping and homework solutions)
 
 ### Schedule
 
