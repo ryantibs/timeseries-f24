@@ -2,8 +2,11 @@ project:
   type: website
 
 render:
-  - "*.qmd"
-  - "!*.qmd"
+  - "index.qmd"
+  - "schedule.qmd"
+  - "homework.qmd"
+  - "supplementary.qmd"
+  - "license.qmd"
 
 website:
   site-url: https://stat153.berkeley.edu/fall-2024/
