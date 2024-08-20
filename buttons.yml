@@ -1,5 +1,5 @@
 - button: Syllabus
-  link: syllabus
+  link: syllabus/syllabus.pdf
   color: purple
 - button: GitHub
   link: https://www.github.com/ryantibs/timeseries-f23/
