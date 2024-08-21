@@ -41,3 +41,9 @@ Handy links:
 ### Supplementary resources
 
 {{< include supplementary.qmd >}}
+
+<br>
+
+---
+
+{{< include license.qmd >}}
