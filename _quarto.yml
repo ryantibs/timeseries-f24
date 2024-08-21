@@ -1,12 +1,13 @@
 project:
   type: website
-
-render:
-  - "index.qmd"
-  - "schedule.qmd"
-  - "homework.qmd"
-  - "supplementary.qmd"
-  - "license.qmd"
+  render:
+    - "index.qmd"
+    - "schedule.qmd"
+    - "homework.qmd"
+    - "supplementary.qmd"
+    - "license.qmd"
+    - "!lectures/"
+    - "!homeworks/"
 
 website:
   site-url: https://stat153.berkeley.edu/fall-2024/
