@@ -549,41 +549,40 @@ Related reading: Chapters 1.3--1.5 of Shumway and Stoffer (SS); Chapters
 
 \item Recall, if the random vector $(x_{t_1}, x_{t_2}, \dots, x_{t_k})$ has a 
   multivariate Gaussian distribution, then it is defined by a mean vector $\mu
-  \in \R^k$ and covariance matrix $\Gamma \in \R^{k \times k}$. We denote the 
-  associated normal distribution by $N(\mu, \Gamma)$, and its density is (get
-  ready for some linear algebra notation ...):
+  \in \R^k$ and covariance matrix $G \in \R^{k \times k}$. We denote the
+  associated normal distribution by $N(\mu, G)$, and its density is (get ready
+  for some linear algebra notation ...): 
   \[
-  f(x) = \frac{1}{\sqrt{(2\pi)^k \det \Gamma}} \exp \Big( -
-  \frac{1}{2} (x - \mu)^\T \Gamma^{-1} ( x - \mu ) \Big) 
+  f(x) = \frac{1}{\sqrt{(2\pi)^k \det G}} \exp \Big( - \frac{1}{2} (x - \mu)^\T
+    G^{-1} ( x - \mu ) \Big)  
   \]
-  Here $\Gamma^{-1}$ is the inverse of the matrix $\Gamma$, $\det \Gamma$ is its
-  determinant, and $(x-\mu)^\T$ is the transpose of the vector $x-\mu$.
-  By convention we treat all vectors as column vectors. (If some of this looks
-  foreign to you, then you should review your linear algebra notes ... it is
-  pretty darn hard to understand aspects of multivariate Gaussians without 
-  linear algebra) 
+  Here $G^{-1}$ is the inverse of the matrix $G$, $\det G$ is its determinant,
+  and $(x-\mu)^\T$ is the transpose of the vector $x-\mu$. By convention we
+  treat all vectors as column vectors. (If some of this looks foreign to you,
+  then you should review your linear algebra notes ... it is pretty darn hard to
+  understand aspects of multivariate Gaussians without linear algebra) 
 
 \item For a Gaussian process, the above display describes the density of a
   collection $(x_{t_1}, x_{t_2}, \dots, x_{t_k})$ variates along the sequence,
   but importantly---even though our notation doesn't reflect this, because
   otherwise it would be too cumbersome---the mean vector $\mu$ and covariance
-  matrix $\Gamma$ here can depend on the time points $t_1,\dots,t_k$. Note that
-  here the mean vector $\mu$ has $i\th$ entry
+  matrix $G$ here can depend on the time points $t_1,\dots,t_k$. Note that here
+  the mean vector $\mu$ has $i\th$ entry 
   \[
   \mu_{x.t_i} = \E(x_{t_i})
   \]
-  and the covariance matrix $\Gamma$ has, as the element in its $i\th$ row and
-  $j\th$ column, 
+  and the covariance matrix $G$ has, as the element in its $i\th$ row and $j\th$
+  column,  
   \[
   \gamma_x(t_i, t_j) = \Cov(x_{t_i}, x_{t_j})
   \]
 
 \item Gaussian processes and weak stationarity are a special combination. If
   $x_t$, $t = 1,2,3,\dots$ is a weakly stationary Gaussian process, then (by
-  weak stationarity) the mean vector $\mu$ and covariance matrix $\Gamma$
-  associated with $(x_{t_1}, x_{t_2}, \dots, x_{t_k})$ are the same as those
-  associated with $(x_{t_1+\ell}, x_{t_2+\ell}, \dots, x_{t_k+\ell})$, for any
-  $\ell$. But by Gaussianity this actually implies that 
+  weak stationarity) the mean vector $\mu$ and covariance matrix $G$ associated
+  with $(x_{t_1}, x_{t_2}, \dots, x_{t_k})$ are the same as those associated
+  with $(x_{t_1+\ell}, x_{t_2+\ell}, \dots, x_{t_k+\ell})$, for any $\ell$. But
+  by Gaussianity this actually implies that  
   \[
   (x_{t_1}, x_{t_2}, \dots, x_{t_k}) \eqd (x_{t_1+\ell}, x_{t_2+\ell}, \dots,
   x_{t_k+\ell}),
