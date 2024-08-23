@@ -11,7 +11,7 @@ format:
 |    |    |    |
 |----|----|----|
 | Week 1: Aug 29 | Characteristics of time series: [pdf](lectures/characteristics/characteristics.pdf), [html](lectures/characteristics/characteristics.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/characteristics) |	
-| Week 2: Sep 3 / Sep 5 |	Measures of dependence [pdf](lectures/dependence/dependence.pdf), [html](lectures/dependence/dependence.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/dependence) | |
+| Week 2: Sep 3 / Sep 5 |	Measures of dependence: [pdf](lectures/dependence/dependence.pdf), [html](lectures/dependence/dependence.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/dependence) | |
 | Week 3: Sep 10 / Sep 12 |	Regression and prediction <!--[pdf](lectures/regression/regression.pdf), [html](lectures/regression/regression.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/regression) --> |	Hw 1 due Fri Sep 13 |
 | Week 4: Sep 17 / Sep 19 |	Regression and prediction | | 	
 | Week 5: Sep 24 / Sep 26 |	Regularization and smoothing <!--[pdf](lectures/smoothing/smoothing.pdf), [html](lectures/smoothing/smoothing.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/smoothing)--> | Hw 2 due Fri Sep 27	|
