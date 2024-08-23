@@ -247,7 +247,7 @@ Related reading: Chapters 1.1--1.2 of Shumway and Stoffer (SS); Chapters 2.3 and
   y_t = \frac{1}{3} \Big( x_{t-2} + x_{t-1} + x_t \Big) 
   \]
   The Covid-19 data plotted above (Figures \ref{fig:covid-cases} and
-  \ref{fig:covid-deaths} was actually filtered with a 7-day trailing average)
+  \ref{fig:covid-deaths}) was actually filtered with a 7-day trailing average
 
 \item A general linear filter takes the form
   \[
@@ -267,21 +267,21 @@ Related reading: Chapters 1.1--1.2 of Shumway and Stoffer (SS); Chapters 2.3 and
 \begin{itemize}
 \item An \emph{autoregressive process} is one that takes the form  
   \[
-  x_t = \sum_{i=1}^k \beta_i x_{t-i} + \epsilon_t
+  x_t = \sum_{i=1}^p \phi_i x_{t-i} + w_t
   \]
-  for coefficients $\beta_1,\dots,\beta_k$ and errors $\epsilon_t$
+  for coefficients $\phi_1,\dots,\phi_p$ and errors $w_t$
 
 \item Typically we assume that the errors are a white noise sequence
 
-\item The value of $k$ is called the \emph{order} of the autoregressive process,
-  and the abbreviation AR($k$) is common. So, for example, AR(3) means an
+\item The value of $p$ is called the \emph{order} of the autoregressive process,
+  and the abbreviation AR($p$) is common. So, for example, AR(3) means an
   autoregressive process with lag 3: each value in the sequence depends on the  
   last 3 values
 
-\item The simplest autoregressive process is AR(1), with coefficient $\beta_1 =
-  1$: this is  
+\item The simplest autoregressive process is AR(1), with coefficient $\phi_1 =
+  1$: this is   
   \[
-  x_t = x_{t-1} + \epsilon_t
+  x_t = x_{t-1} + w_t
   \]
   also known as a \emph{random walk}
 
@@ -305,7 +305,7 @@ Related reading: Chapters 1.1--1.2 of Shumway and Stoffer (SS); Chapters 2.3 and
 
 \item Ok, back to the main story, a \emph{random walk with drift} takes the form   
   \[
-  x_t = \delta + x_{t-1} + \epsilon_t
+  x_t = \delta + x_{t-1} + w_t
   \]
   for some $\delta > 0$. Figure \ref{fig:rw} plots examples of random walks with
   and without drift 
@@ -320,9 +320,9 @@ Related reading: Chapters 1.1--1.2 of Shumway and Stoffer (SS); Chapters 2.3 and
 \item By unraveling the last iteration, we can write a random walk with drift
   equivalently as (assuming we start at $x_0 = 0$):
   \[
-  x_t = \delta t + \sum_{i=1}^t \epsilon_i 
+  x_t = \delta t + \sum_{i=1}^t w_i 
   \]
-  Think: what happens to the variance of this as $t$ grows? 
+  Think: what happens to the mean and variance of this as $t$ grows? 
 \end{itemize}
 
 \section{Signal plus noise}
@@ -331,7 +331,7 @@ Related reading: Chapters 1.1--1.2 of Shumway and Stoffer (SS); Chapters 2.3 and
 \item A useful general time series model is called the \emph{signal plus noise
     model}, of the form 
   \[
-  x_t = \theta_t + \epsilon_t
+  x_t = \theta_t + w_t
   \]
   where the errors $e_t$, $t = 1,2,3,\dots$ may be white noise or may be
   correlated over time
@@ -350,7 +350,7 @@ Related reading: Chapters 1.1--1.2 of Shumway and Stoffer (SS); Chapters 2.3 and
   fixed period. For example: 
 
 \begin{itemize}
-\item Pediatric doctor's office visits dip on weekends (weekly period)
+\item Routine doctor's office visits dip on weekends (weekly period)
 \item Gambling goes up at the beginning of each month (monthly period)
 \item Chocolate purchases go up on and around Valentine's day (yearly period)
 \end{itemize}
