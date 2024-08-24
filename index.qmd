@@ -23,9 +23,8 @@ format:
 - **Lab times**: Fridays, 9-11am, Evans 344 and 1-3pm, Evans 332
 - **Office hours**: RT: Thursdays, 1-2pm, Evans 417
 
-Handy links:
+Make sure to read the [syllabus](syllabus/syllabus.pdf). Other handy links:
 
-- [Syllabus](syllabus/syllabus.pdf)
 - [GitHub repo](https://github.com/berkeley-stat153/fall-2024/) (source files for lectures and homeworks)
 - [Ed Discussion](https://edstem.org/us/courses/62773/) (for class discussions and announcements)
 - [bCourses](https://bcourses.berkeley.edu/courses/1537658/) (for grade-keeping and homework solutions)
