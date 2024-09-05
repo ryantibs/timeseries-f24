@@ -24,4 +24,4 @@ format:
 | Week 12: Nov 12 / Nov 14 | ETS models	| | 	
 | Week 13: Nov 19 / Nov 21 | Advanced topics <!--[pdf](lectures/advanced/advanced.pdf), [html](lectures/advanced/advanced.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/advanced)--> | Hw 5 due Fri Nov 22 | 
 | Week 14: Nov 26 |	[Nothing! Enjoy Thanksgiving] | |	
-| Week 15: Fri 3 / Dec 5 | Advanced topics | Final exam TBD | 
+| Week 15: Dec 3 / Dec 5 | Advanced topics | Final exam TBD | 
