@@ -20,7 +20,7 @@ format:
 *Please email the GSI with any issues; the Instructor will be looped in only as-needed.*
 
 - **Class times:** Tuesdays and Thursdays, 2-3:30pm, McCone 141
-- **Lab times:** Fridays, 9-11am, Evans 344 and 1-3pm, Evans 332
+- **Lab times:** Fridays, 9-11am, Evans 344 and 1-3pm, Evans 334
 - **Office hours:** RT: Thursdays, 1-2pm, Evans 417
 
 Make sure to read the [syllabus](syllabus/syllabus.pdf). Other handy links:
