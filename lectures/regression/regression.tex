@@ -1065,7 +1065,7 @@ just have to remember that $i$ indexes samples (rows), and $j$ indexes features
   prefer mean absolute percentage error (MAPE):
   \[
   \MAPE = 100 \times \frac{1}{N} \sum_{t=1}^N \frac{| y_{\text{new},t} -
-    \hat{y}_{\text{new},t}|}{ y_{\text{new},t} } 
+    \hat{y}_{\text{new},t}|}{| y_{\text{new},t} |} 
   \]
 
 \item While intuitively appealing, MAPE can also have undesirable and erratic
