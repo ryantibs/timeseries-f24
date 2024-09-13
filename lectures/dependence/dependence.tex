@@ -194,7 +194,7 @@ Related reading: Chapters 1.3--1.5 of Shumway and Stoffer (SS); Chapters
   same is true of the auto-correlation function
 
 \item For a moving average of white noise, the auto-covariance function
-  decreases as the gap between $s$ and $t$ grows. For example, for  
+  generally decreases as the gap between $s$ and $t$ grows. For example, for   
   \[
   y_t = \frac{1}{3} \Big( x_{t-1} + x_t + x_{t+1} \Big)
   \]
@@ -230,8 +230,7 @@ Related reading: Chapters 1.3--1.5 of Shumway and Stoffer (SS); Chapters
   \]
 
 \item For a random walk (with or without drift), the auto-covariance function
-  also decreases as the gap between $s$ and $t$ grows, but has a different 
-  structure. Considering 
+  has a different structure. Considering 
   \[
   x_t = \delta t + \sum_{i=1}^t w_i
   \]
@@ -251,17 +250,19 @@ Related reading: Chapters 1.3--1.5 of Shumway and Stoffer (SS); Chapters
               \sqrt{t}} \\  
   &= \frac{\min\{s, t\}}{\sqrt{st}}
   \end{align*}
+  Interestingly, again, we see that the auto-correlation decreases  as the gap
+  between $s$ and $t$ grows 
 
 \item Figure \ref{fig:heatmap} gives a visualization of the auto-correlation
   functions for the moving average and random walk settings. The moving average
-  auto-correlation function is presented as a banded matrix (though it is hard
-  to see the band since the sequence is of total length $n=500$ and most values
-  in the auto-correlation matrix are zero). Importantly, we can see that the
-  same pattern persists throughout the whole matrix, and all that matters is the 
-  distance to the diagonal. This is an important property that we will revisit
-  soon (hint: stationarity). Meanwhile, the random walk auto-correlation
+  auto-correlation function is a banded matrix (though it is hard to see the
+  band since the sequence is of total length $n=500$ and most values in the
+  auto-correlation matrix are zero). Importantly, we can see that the same
+  pattern persists throughout the whole matrix, and all that matters is the
+  distance to the diagonal. This reflects an important property that we will 
+  learn soon (stationarity). Meanwhile, the random walk auto-correlation
   function does \emph{not} have a pattern that persists throughout, and we can
-  see a ``cone'' that grows around the diagonal as time grows 
+  see a ``cone'' that grows around the diagonal 
 
 \begin{figure}[htb]
 \centering
