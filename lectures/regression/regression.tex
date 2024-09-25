@@ -1230,7 +1230,7 @@ Cross-validation, 4-steps ahead:
 \bigskip
 \includegraphics[width=0.9\textwidth]{fig/cardio-cv-2.pdf} 
 \caption{As in the above figure, but with the regression model trained on a
-  trailing window of 10 weeks.} 
+  trailing window of 50 weeks.} 
 \label{fig:cardio_cv2}
 \end{figure}
 \end{itemize}
@@ -1254,8 +1254,8 @@ Cross-validation, 4-steps ahead:
   for a choice of window length $w$
 
 \item Figure \ref{fig:cardio_cv2} shows such forecasts with a window length $w = 
-  10$ (i.e., 10 weeks). We see that it does quite a bit better, both
-  qualitatively and in terms of MAE (from about 8.03 to 6.77) 
+  50$ (i.e., 50 weeks). We see that it does quite a bit better, both
+  qualitatively and in terms of MAE (from about 8.03 to 6.01)  
 
 \item Why does this happen? Because the relationship between cardiovascular
   mortality and particulate level is changing over time. In the language of the
