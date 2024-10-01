@@ -10,6 +10,6 @@ format:
 
 - Homework 1: [pdf](homeworks/homework1/homework1.pdf), [Rmd](homeworks/homework1/homework1.Rmd),  [source](https://github.com/berkeley-stat153/fall-2024/tree/master/homeworks/homework1) 
 - Homework 2: [pdf](homeworks/homework2/homework2.pdf), [Rmd](homeworks/homework2/homework2.Rmd),  [source](https://github.com/berkeley-stat153/fall-2024/tree/master/homeworks/homework2)
-- Homework 3 <!--[html](homeworks/homework3/homework3.html), [Rmd](homeworks/homework3/homework3.Rmd),  [source](https://github.com/berkeley-stat153/fall-2024/tree/master/homeworks/homework3)--> 
-- Homework 4 <!--[html](homeworks/homework4/homework4.html), [Rmd](homeworks/homework4/homework4.Rmd),  [source](https://github.com/berkeley-stat153/fall-2024/tree/master/homeworks/homework4)--> 
-- Homework 5 <!--[html](homeworks/homework4/homework4.html), [Rmd](homeworks/homework4/homework4.Rmd),  [source](https://github.com/berkeley-stat153/fall-2024/tree/master/homeworks/homework4)--> 
+- Homework 3 [pdf](homeworks/homework3/homework3.pdf), [Rmd](homeworks/homework3/homework3.Rmd),  [source](https://github.com/berkeley-stat153/fall-2024/tree/master/homeworks/homework3)
+- Homework 4 <!--[pdf](homeworks/homework4/homework4.pdf), [Rmd](homeworks/homework4/homework4.Rmd),  [source](https://github.com/berkeley-stat153/fall-2024/tree/master/homeworks/homework4)--> 
+- Homework 5 <!--[pdf](homeworks/homework4/homework4.pdf), [Rmd](homeworks/homework4/homework4.Rmd),  [source](https://github.com/berkeley-stat153/fall-2024/tree/master/homeworks/homework4)--> 
