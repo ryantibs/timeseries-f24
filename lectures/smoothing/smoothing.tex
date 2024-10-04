@@ -458,7 +458,7 @@ Relevant reading: Chapter 2.3 (smoothing) of Shumway and Stoffer (SS); Chapters
   (with larger $k$). This is precisely what \emph{kernel smoothing} does: it
   uses $k = n$ and 
   \[
-  a_j = \frac{K(j/b)}{\sum_{i=1}^n K(i/b)}, \quad j = 1,\dots,n 
+  a_j = \frac{K(j/b)}{\sum_{i=-n}^n K(i/b)}, \quad j = 1,\dots,n 
   \]
   for a particular \emph{kernel function} $K : \R \to \R$ and \emph{bandwidth}
   $b$. Think of the bandwidth as a tuning parameter, just like the

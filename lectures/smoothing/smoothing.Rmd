@@ -82,7 +82,8 @@ legend("topright", legend = paste("Lag", lags), lty = 1:5, col = 1:8)
 # Moving average
 
 ```{r soi-ma}
-wgts = rep(1, 11) / 11
+m = 55
+wgts = rep(1, m) / m
 ma = stats::filter(soi, sides = 2, filter = wgts)
 plot(soi, col = 8, ylab = "Southern Oscillation Index", 
      main = "Moving average")
