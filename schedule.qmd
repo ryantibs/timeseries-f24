@@ -18,7 +18,7 @@ format:
 | Week 6: Oct 1 / Oct 3 |	Regularization and smoothing (continued) | | 	
 | Week 7: Oct 8 / Oct 10 | Spectral analysis <!--[pdf](lectures/spectral/spectral.pdf), [html](lectures/spectral/spectral.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/spectral)--> | Hw 3 due Fri Oct 11 |
 | Week 8: Oct 15 / Oct 17 |	Spectral analysis | | 	
-| Week 9: Oct 22 / Oct 24 |	ARIMA models | <!--[pdf](lectures/arima/arima.pdf), [html](lectures/arima/arima.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/arima)--> |	Midterm exam on Oct 21 |
+| Week 9: Oct 22 / Oct 24 |	ARIMA models <!--[pdf](lectures/arima/arima.pdf), [html](lectures/arima/arima.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/arima)--> | Midterm exam on Oct 21 |
 | Week 10: Oct 29 / Oct 31 | ARIMA models | | 	
 | Week 11: Nov 5 / Nov 7 | ETS models <!--[pdf](lectures/ets/ets.pdf), [html](lectures/ets/ets.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/ets)--> | Hw 4 due Fri Nov 8 |
 | Week 12: Nov 12 / Nov 14 | ETS models	| | 	
