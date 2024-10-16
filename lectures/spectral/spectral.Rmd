@@ -131,7 +131,7 @@ theta = seq(0, 0.9, length = 8)
 omega = seq(0, 1/2, length = 500)
 fmat = matrix(NA, length(omega), length(theta))
 for (j in 1:ncol(fmat)) {
-  fmat[,j] = (1 + theta[j])^2 + 2* theta[j]^2 * cos(2*pi*omega)
+  fmat[,j] = (1 + theta[j])^2 + 2* theta[j] * cos(2*pi*omega)
 }
 
 par(mar = c(4.5, 4.5, 0.5, 0.5))
