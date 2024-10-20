@@ -1,0 +1,220 @@
+---
+title: 'Lecture 6: Autoregressive Integrated Moving Average Models'
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    df_print: paged
+    code_folding: show
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(dev = c("png", "pdf"), fig.path = "fig/",
+                     cache = TRUE, autodep = TRUE, cache.comments = TRUE)
+```
+
+# Load packages
+
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(astsa)
+library(fpp3)
+library(epidatasets)
+```
+
+# AR(1) processes
+
+```{r ar}
+x1 = arima.sim(list(order = c(1,0,0), ar = 0.9), n = 100)
+x2 = arima.sim(list(order = c(1,0,0), ar = -0.9), n = 100)
+
+par(mfrow = c(2, 1), mar = c(2, 0.5, 3, 0.5))
+plot(x1, main = paste("AR(1), phi = +0.9"), xlab = "", ylab = "")
+plot(x2, main = paste("AR(1), phi = -0.9"), xlab = "", ylab = "")
+```
+
+# MA(1) processes
+
+```{r ma}
+x1 = arima.sim(list(order = c(0,0,1), ma = 0.9), n = 100)
+x2 = arima.sim(list(order = c(0,0,1), ma = -0.9), n = 100)
+
+par(mfrow = c(2, 1), mar = c(2, 0.5, 3, 0.5))
+plot(x1, main = paste("MA(1), phi = +0.9"), xlab = "", ylab = "")
+plot(x2, main = paste("MA(1), phi = -0.9"), xlab = "", ylab = "")
+```
+
+# Parameter redundancy
+
+```{r par-redundancy}
+x = rnorm(100)
+arima(x, order = c(1,0,1), include.mean = FALSE)
+```
+
+# Auto-correlation
+
+```{r auto-cor}
+x1 = arima.sim(list(order = c(2,0,0), ar = c(1.5, -0.75)), n = 500)
+x2 = arima.sim(list(order = c(0,0,3), ma = c(0.9, 0.85, 0.8)), n = 500)
+
+par(mfrow = c(2, 2), mar = c(4.5, 4.5, 0.5, 0.5))
+xlim = c(1, 25)
+ylim = c(-1, 1)
+cex = 1.25
+acf(x1, xlim = xlim, ylim = ylim)
+legend("topright", legend = "AR(2)", bty = "n", cex = cex) 
+acf(x2, xlim = xlim, ylim = ylim)
+legend("topright", legend = "MA(3)", bty = "n", cex = cex) 
+pacf(x1, xlim = xlim, ylim = ylim, ylab = "PACF") 
+legend("topright", legend = "AR(2)", bty = "n", cex = cex) 
+pacf(x2, xlim = xlim, ylim = ylim, ylab = "PACF")
+legend("topright", legend = "MA(3)", bty = "n", cex = cex) 
+```
+
+# Auto ARIMA?
+
+```{r auto-arima}
+set.seed(666)
+x = rnorm(1000)         
+
+# Older forecast package
+forecast::auto.arima(x)  
+
+# Newer fable package, same result (input must be a tsibble)
+dat = tsibble(data.frame(x, Time = 1:length(x)), index = Time)
+dat |> model(arima = ARIMA(x ~ pdq())) |> report()
+
+# Uh oh! This is basically a redundant parametrization of white noise
+```
+
+# ARIMA for CAR exports
+
+```{r car}
+car = global_economy |> filter(Code == "CAF")
+
+# Small bit of exploratory analysis
+car |>
+  ggplot(aes(x = Year, y = Exports)) + 
+  geom_line() + geom_point() +
+  labs(title = "Central African Republic (CAR) exports",
+       y = "Exports (% of GDP)") + theme_bw() 
+
+car |> 
+  ggplot(aes(x = Year, y = difference(Exports))) + 
+  geom_line() + geom_point() + theme_bw() 
+
+par(mar = c(4.5, 4.5, 0.5, 0.5))
+xlim = c(1, 15)
+ylim = c(-0.5, 0.5)
+acf(diff(car$Exports), xlim = xlim, ylim = ylim)
+pacf(diff(car$Exports), xlim = xlim, ylim = ylim, ylab = "PACF")
+
+# Now go and fit ARIMA models
+car_fit = car |>
+  model(arima210 = ARIMA(Exports ~ pdq(2,1,0)),
+        arima013 = ARIMA(Exports ~ pdq(0,1,3)),
+        auto = ARIMA(Exports))
+
+car_fit |> pivot_longer(!Country, names_to = "Model name",
+                         values_to = "Orders")
+
+# Glance at various metrics across the three models
+car_fit |> glance() |> select(.model:BIC) |> arrange(AICc) 
+
+# Print coefficients, plot roots for the AR model
+car_fit |> select(arima210) |> coef()
+car_fit |> select(arima210) |> gg_arma()
+
+# Plot residuals from the AR model
+car_fit |> select(arima210) |> gg_tsresiduals() 
+
+# Make 5-year horizon forecasts from the AR model
+car_fit |>  
+  select(Country, arima210) |>
+  forecast(h = 5) |> 
+  autoplot(car) + labs(title = "ARIMA(2,1,0)") + theme_bw()
+
+# Make 5-year horizon forecasts from a random walk
+car |>
+  model(rw = ARIMA(Exports ~ pdq(0,1,0) + 0)) |>
+  forecast(h = 5) |> 
+  autoplot(car) + labs(title = "Random walk") + theme_bw()
+```
+
+# General warning ...
+
+```{r oh-no}
+# WARNING!!! The ARIMA() function may actually still do some automatic model 
+# selection outside of the specified orders p,d,q. This can be dangerous because
+# it may decide to do something that you didn't realize! It will decide whether
+# to include a constant c or seasonal orders P,D,Q based on the data. To shut 
+# this off, you have to FULLY specify the model
+
+# Here's an example:
+oh_no = car |>
+  model(model1 = ARIMA(Exports ~ pdq(2,0,0)),
+        model2 = ARIMA(Exports ~ 0 + pdq(2,0,0) + PDQ(0,0,0)))
+
+# Thought you clearly specified as AR(2) model in the first line, right? WRONG. 
+# Take a look. You'll see it decided to include a constant ...
+oh_no |> select(model1) |> report()
+
+# The second specification is the one that always returns the AR(2) model
+oh_no |> select(model2) |> report()
+```
+
+# SARIMA for US employment
+
+```{r leisure}
+leisure = us_employment |>
+  filter(Title == "Leisure and Hospitality", year(Month) > 2000) |>
+  mutate(Employed = Employed/1000) |>
+  select(Month, Employed)
+
+# Small bit of exploratory analysis
+leisure |>
+  ggplot(aes(x = Month, y = Employed)) + 
+  geom_line() + geom_point() +
+  labs(title = "US employment: leisure and hospitality",
+       y = "Employed (millions of people)") + theme_bw() 
+
+leisure |> 
+  ggplot(aes(x = Month, y = difference(Employed, lag = 12))) + 
+  geom_line() + geom_point() + theme_bw() 
+
+leisure |> 
+  ggplot(aes(x = Month, y = difference(difference(Employed, lag = 12)))) + 
+  geom_line() + geom_point() + theme_bw() 
+
+par(mar = c(4.5, 4.5, 0.5, 0.5))
+xlim = c(1, 25)
+ylim = c(-0.3, 0.2)
+acf(diff(diff(leisure$Employed, lag = 12)), xlim = xlim, ylim = ylim)
+pacf(diff(diff(leisure$Employed, lag = 12)), xlim = xlim, ylim = ylim, 
+     ylab = "PACF")
+
+# Now go and fit SARIMA models
+leisure_fit = leisure |>
+  model(arima210110 = ARIMA(Employed ~ pdq(2,1,0) + PDQ(1,1,0, period = 12)),
+        arima012011 = ARIMA(Employed ~ pdq(0,1,2) + PDQ(0,1,1, period = 12)),
+        auto = ARIMA(Employed))
+
+leisure_fit |> pivot_longer(everything(), names_to = "Model name",
+                            values_to = "Orders")
+
+# Glance at various metrics across the three models
+leisure_fit |> glance() |> select(.model:BIC) |> arrange(AICc) 
+
+# Print coefficients, plot roots for the AR model
+leisure_fit |> select(arima210110) |> coef()
+leisure_fit |> select(arima210110) |> gg_arma()
+
+# Plot residuals from the AR model
+leisure_fit |> select(arima210110) |> gg_tsresiduals() 
+
+# Make 3-year horizon forecasts from the AR model
+leisure_fit |>  
+  select(arima210110) |>
+  forecast(h = 36) |> 
+  autoplot(leisure) + labs(title = "ARIMA(2,1,0)(1,1,0)[12]") + theme_bw()
+```
