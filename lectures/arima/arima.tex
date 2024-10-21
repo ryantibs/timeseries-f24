@@ -783,9 +783,9 @@ parts (which we may brush over) are marked with *.
   \verb|astsa| package (written by Stoffer of SS) and \verb|fable| package
   (written by Hyndman of HA) provide functionality for ARIMA modeling
 
-\item If there's one thing even more complicated than fitting ARIMA models, it's
-  choosing an ARIMA model---that is, \emph{order selection}, or determining the 
-  choice of $p,q$ from data 
+\item Then there's the topic of how to choose an ARMA model---that is,
+  \emph{order selection}, or determining the choice of $p,q$ from data. This is
+  also quite complicated   
 
 \item At least, this topic seems to be more controversial ... some authors like
   Hyndman believe that this can be automated (via algorithms like the
@@ -798,14 +798,12 @@ parts (which we may brush over) are marked with *.
   and recommend more human-expert-driven model building  
 
 \item If the point is to identify the ``right'' structure, then Stoffer may have
-  a point: if the data generating model was truly a member of the ARIMA family,
-  then it would be hard to identify it reliably (see R notebook examples). But
-  to HA's credit, their Chapter 9.8 does also recommend more of a
-  human-in-the-loop procedure than just calling \verb|ARIMA()| once, involving 
-  diagnostics 
+  a point: if the data generating model was truly a member of the ARMA family,
+  then it would be hard to identify it reliably (see R notebook examples)
 
-\item The gist of the non-automated part (which is fairly standard) is as
-  follows: 
+\item But to HA's credit, their Chapter 9.8 does also recommend more of a
+  human-in-the-loop procedure, involving diagnostics. The gist of the
+  non-automated part (which is fairly standard) is as follows: 
   \begin{enumerate}
   \item[0.] Plot the data to identify (and possibly remove) any outliers, and 
    apply data transformations (e.g., Box-Cox), if needed, to stabilize the  
@@ -813,18 +811,19 @@ parts (which we may brush over) are marked with *.
   \item If the data appears nonstationary, take differences until it is
     stationary 
   \item Plot the ACF and PACF to determine possible MA and AR orders 
-  \item Fit an ARMA model, inspect the residuals: they should look like white 
-    noise 
+  \item Fit an ARMA (or ARIMA) model, inspect the residuals: they should look
+    like  white noise  
   \end{enumerate}
 
-\item Step 1 is at the heart of ARIMA, which we'll cover soon. Steps 2-3 are the
-  part that can be (but arguably, should not be) automated by Hyndman-Khandakar:  
-  instead of a single ARMA model, it fits various ARMA models, and then uses an
-  information criterion (like AICc) to select a final one  
+\item Step 1 is at the heart of ARIMA, which we'll cover soon. Steps 2-3 are the 
+  part that can be automated by Hyndman-Khandakar (though to reiterate, this 
+  may introduce considerable variance/volatility into the estimation produce as
+  a whole): instead of fitting just a single ARMA model, it fits various ARMA
+  models, and using an information criterion (like AICc) to select a final one       
 
 \item Chapter 3.7 in SS also goes into details about a similar sequence of steps
   for building ARIMA models, with worked examples. We'll also go through an
-  example shortly, in the ARIMA section 
+  example shortly, in the ARIMA section   
 
 \item The ACF and PACF are great tools, and looking at them to get a sense of MA
   and AR dependence is generally helpful, but we will not concern ourselves too
