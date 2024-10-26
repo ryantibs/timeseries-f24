@@ -1438,7 +1438,9 @@ this to fit ARIMA($p,d,q$) and make forecasts in time series CV \smallskip}
   $u_t$, we will not know how to impute them) 
 
 \item As usual (as we described in the regression lecture), we can use lagged
-  exogenous features as predictors in order to circumvent this issue
+  exogenous features as predictors in order to partially circumvent this
+  issue: including a lagged feature $u_{t-k}$ in the ARIMAX model for $x_t$ will
+  allow us to forecast up to $k$ steps into the future
 
 \item (Note: be careful not to confuse an ARIMAX model with a regression with 
   correlated errors! They are not the same thing. In both models, there are
