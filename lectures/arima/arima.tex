@@ -689,16 +689,16 @@ parts (which we will brush over) are marked with *.
 
 \item We are now ready to define the partial auto-correlation function for a
   stationary time series $x_t$, $t = 0, \pm 1, \pm 2, \pm 3, \dots$, denoted
-  $\phi_x(h)$ at a lag $h$. Without a loss of generality we will only define it
-  for $h \geq 0$, since it will be symmetric around zero (due to stationarity). 
-  First, at lag $h=0$ or $h=1$, we simply define: 
+  $\varphi_x(h)$ at a lag $h$. Without a loss of generality we will only define 
+  it for $h \geq 0$, since it will be symmetric around zero (due to
+  stationarity). First, at lag $h=0$ or $h=1$, we simply define:   
   \begin{align*}
-  \phi_x(0) &= 1 \\
-  \phi_x(1) &= \Cor(x_t, x_{t+1}) 
+  \varphi_x(0) &= 1 \\
+  \varphi_x(1) &= \Cor(x_t, x_{t+1}) 
   \end{align*}
   Next, at all lags $h \geq 2$, we define: 
   \begin{align*}
-  &\phi_x(h) = \Cor(x_t - \hat{x}_t, x_{t+h} - \hat{x}_{t+h}), \quad
+  &\varphi_x(h) = \Cor(x_t - \hat{x}_t, x_{t+h} - \hat{x}_{t+h}), \quad
     \text{where} \\ 
   &\text{$\hat{x}_t$ is the linear regression of $x_t$ on
     $x_{t+1},\dots,x_{t+h-1}$}, \quad \text{and} \\ 
@@ -716,7 +716,7 @@ parts (which we will brush over) are marked with *.
   Thus \smash{$x_{t+h} - \hat{x}_{t+h} = x_{t+h} -  \sum_{j=1}^p \phi_j
     x_{t+h-j} = w_{t+h}$}, and the partial auto-correlation is
   \[
-  \phi_x(h) = \Cor(x_t - \hat{x}_t, w_{t+h}) = 0
+  \varphi_x(h) = \Cor(x_t - \hat{x}_t, w_{t+h}) = 0
   \]
   because causality implies that $x_t$ can only depend on white noise through
   time $t$, and \smash{$\hat{x}_t$} can only depend on white noise through time
