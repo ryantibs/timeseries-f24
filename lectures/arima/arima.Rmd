@@ -152,7 +152,7 @@ car |>
 
 # Here's an example:
 oh_no = car |>
-  model(model1 = ARIMA(Exports ~ pdq(2,0,0)),
+  model(model1 = ARIMA(Exports ~ pdq(2)),
         model2 = ARIMA(Exports ~ 0 + pdq(2,0,0) + PDQ(0,0,0)))
 
 # Thought you clearly specified as AR(2) model in the first line, right? WRONG. 
