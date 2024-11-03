@@ -8,20 +8,20 @@ format:
     code-block-background: true
 ---
 
-|    |    |    |
-|----|----|----|
+|   |    |   |
+|---|----|---|
 | Week 1: Aug 29 | Characteristics of time series: [pdf](lectures/characteristics/characteristics.pdf), [html](lectures/characteristics/characteristics.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/characteristics) |	
-| Week 2: Sep 3 / Sep 5 |	Measures of dependence: [pdf](lectures/dependence/dependence.pdf), [html](lectures/dependence/dependence.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/dependence) | |
-| Week 3: Sep 10 / Sep 12 |	Regression and prediction: [pdf](lectures/regression/regression.pdf), [html](lectures/regression/regression.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/regression) |	Hw 1 due Fri Sep 13 |
-| Week 4: Sep 17 / Sep 19 |	Regression and prediction (continued) | | 	
-| Week 5: Sep 24 / Sep 26 |	Regularization and smoothing: [pdf](lectures/smoothing/smoothing.pdf), [html](lectures/smoothing/smoothing.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/smoothing) | Hw 2 due Fri Sep 27	|
-| Week 6: Oct 1 / Oct 3 |	Regularization and smoothing (continued) | | 	
-| Week 7: Oct 8 / Oct 10 | Spectral analysis: [pdf](lectures/spectral/spectral.pdf), [html](lectures/spectral/spectral.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/spectral) | Hw 3 due Fri Oct 11 |
-| Week 8: Oct 15 / Oct 17 |	Spectral analysis (continued) | | 	
-| Week 9: Oct 22 / Oct 24 |	ARIMA models: [pdf](lectures/arima/arima.pdf), [html](lectures/arima/arima.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/arima) | Midterm exam on Oct 21 |
-| Week 10: Oct 29 / Oct 31 | ARIMA models (continued) | | 	
-| Week 11: Nov 5 / Nov 7 | ETS models: [pdf](lectures/ets/ets.pdf), [html](lectures/ets/ets.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/ets) | Hw 4 due Fri Nov 8 |
-| Week 12: Nov 12 / Nov 14 | ETS models	(continued on Tues; canceled on Thurs for [BSTARS](https://statistics.berkeley.edu/research/industry/berkeley-statistics-annual-research-symposium-bstars)) | | 	
-| Week 13: Nov 19 / Nov 21 | Advanced topics: [pdf](lectures/advanced/advanced.pdf), [html](lectures/advanced/advanced.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/advanced) | Hw 5 due Fri Nov 22 | 
-| Week 14: Nov 26 / Nov 28 | (Nothing! Enjoy Thanksgiving) | |	
-| Week 15: Dec 3 / Dec 5 | Advanced topics (continued) | Final exam TBD | 
+| Week 2: Sep 3-5 |	Measures of dependence: [pdf](lectures/dependence/dependence.pdf), [html](lectures/dependence/dependence.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/dependence) | |
+| Week 3: Sep 10-12 |	Regression and prediction: [pdf](lectures/regression/regression.pdf), [html](lectures/regression/regression.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/regression) |	Hw 1 due Fri Sep 13 |
+| Week 4: Sep 17-19 |	Regression and prediction (continued) | | 	
+| Week 5: Sep 24-26 |	Regularization and smoothing: [pdf](lectures/smoothing/smoothing.pdf), [html](lectures/smoothing/smoothing.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/smoothing) | Hw 2 due Fri Sep 27	|
+| Week 6: Oct 1-3 |	Regularization and smoothing (continued) | | 	
+| Week 7: Oct 8-10 | Spectral analysis: [pdf](lectures/spectral/spectral.pdf), [html](lectures/spectral/spectral.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/spectral) | Hw 3 due Fri Oct 11 |
+| Week 8: Oct 15-17 |	Spectral analysis (continued) | | 	
+| Week 9: Oct 22-24 |	ARIMA models: [pdf](lectures/arima/arima.pdf), [html](lectures/arima/arima.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/arima) | Midterm on Oct 21 |
+| Week 10: Oct 29-31 | ARIMA models (continued) | | 	
+| Week 11: Nov 5-7 | ETS models: [pdf](lectures/ets/ets.pdf), [html](lectures/ets/ets.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/ets) | Hw 4 due Fri Nov 8 |
+| Week 12: Nov 12-14 | ETS models	(continued on Tues; canceled on Thurs for [BSTARS](https://statistics.berkeley.edu/research/industry/berkeley-statistics-annual-research-symposium-bstars)) | | 	
+| Week 13: Nov 19-21 | Advanced topics: [pdf](lectures/advanced/advanced.pdf), [html](lectures/advanced/advanced.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/advanced) | Hw 5 due Fri Nov 22 | 
+| Week 14: Nov 26-28 | (Nothing! Enjoy Thanksgiving) | |	
+| Week 15: Dec 3-5 | Advanced topics (continued) | Final exam TBD | 
