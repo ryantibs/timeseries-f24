@@ -8,8 +8,8 @@ format:
     code-block-background: true
 ---
 
-|   |    |   |
-|---|----|---|
+|  |  |  |
+|--|--|--|
 | Week 1: Aug 29 | Characteristics of time series: [pdf](lectures/characteristics/characteristics.pdf), [html](lectures/characteristics/characteristics.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/characteristics) |	
 | Week 2: Sep 3-5 |	Measures of dependence: [pdf](lectures/dependence/dependence.pdf), [html](lectures/dependence/dependence.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/dependence) | |
 | Week 3: Sep 10-12 |	Regression and prediction: [pdf](lectures/regression/regression.pdf), [html](lectures/regression/regression.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/regression) |	Hw 1 due Fri Sep 13 |
@@ -25,3 +25,5 @@ format:
 | Week 13: Nov 19-21 | Advanced topics: [pdf](lectures/advanced/advanced.pdf), [html](lectures/advanced/advanced.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/advanced) | Hw 5 due Fri Nov 22 | 
 | Week 14: Nov 26-28 | (Nothing! Enjoy Thanksgiving) | |	
 | Week 15: Dec 3-5 | Advanced topics (continued) | Final exam TBD | 
+
+: {tbl-colwidths="[25,50,25]"}
