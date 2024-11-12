@@ -791,7 +791,7 @@ will brush over) are marked with *.
   &= \hat{x}_{t-1}^t + P_t^{t-1} H^\T (H P_t^{t-1} H^\T +  R)^{-1} r_t \\
   &= \hat{x}_{t-1}^t + K_t r_t
   \end{align*}
-  with the last line following from standard conditional expectation properties
+  with the third line following from standard conditional expectation properties 
   of multivariate Gaussians. This verifies \eqref{eq:filter_x}
 
 \item Similarly 
@@ -802,7 +802,7 @@ will brush over) are marked with *.
   &= P_t^{t-1} - P_t^{t-1} H^\T (H P_t^{t-1} H^\T +  R)^{-1} H P_t^{t-1} \\
   &= (I - K_t H) P_t^{t-1}
   \end{align*}
-  with the last line following from standard conditional covariance properties
+  with the third line following from standard conditional covariance properties
   of multivariate Gaussians. This verifies \eqref{eq:filter_p}
 \end{itemize}
 
