@@ -24,6 +24,6 @@ format:
 | Week 12: Nov 12-14 | ETS models	(continued on Tues; canceled on Thurs for [BSTARS](https://statistics.berkeley.edu/research/industry/berkeley-statistics-annual-research-symposium-bstars)) | | 	
 | Week 13: Nov 19-21 | Advanced topics: [pdf](lectures/advanced/advanced.pdf), [html](lectures/advanced/advanced.html), [source](https://github.com/berkeley-stat153/fall-2024/tree/master/lectures/advanced) | Hw 5 due Fri Nov 22 | 
 | Week 14: Nov 26-28 | (Nothing! Enjoy Thanksgiving) | |	
-| Week 15: Dec 3-5 | Advanced topics (continued) | Final exam TBD | 
+| Week 15: Dec 3-5 | Advanced topics (continued) | Final exam on Dec 17 | 
 
 : {tbl-colwidths="[25,50,25]"}
